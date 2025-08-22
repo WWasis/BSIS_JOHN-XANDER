@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Freelancer - Home</title>
-  
+  <title>My Progress - Home</title>
+
   <style>
     .photo-img {
-      height: 400px;      
-      object-fit: cover;  
+      height: 400px;
+      object-fit: cover;
       cursor: pointer;
     }
     .masthead-avatar {
-      width: 200px;      
-      height: 200px;     
-      object-fit: cover; 
-      border-radius: 50%; 
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
     }
     .profile-avatar {
       width: 180px;
@@ -23,7 +23,9 @@
       object-fit: cover;
       border-radius: 50%;
     }
-    .gallery-card { cursor: pointer; }
+    .gallery-card {
+      cursor: pointer;
+    }
   </style>
 
   <!-- Bootstrap 5 CSS -->
@@ -36,9 +38,9 @@
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand" href="#page-top">Work In Progress</a>
-      <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" 
-              type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" 
-              aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
+               type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+               aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
       </button>
@@ -48,14 +50,10 @@
           <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#gallery">Gallery</a></li>
           <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#profile">Profile</a></li>
           <li class="nav-item"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
-         
-
         </ul>
       </div>
     </div>
   </nav>
-
-  <br><br>
 
   <!-- Masthead -->
   <header class="masthead bg-primary text-white text-center">
@@ -97,8 +95,6 @@
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-5">Gallery</h2>
       <div class="row g-4">
-
-        <!-- Gallery items: when clicked they open the modal full-screen -->
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p1.jpg" class="card-img-top photo-img gallery-img" alt="Photo 1" data-bs-src="assets/img/p1.jpg" data-bs-caption="Photo 1 description">
@@ -107,7 +103,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p2.jpg" class="card-img-top photo-img gallery-img" alt="Photo 2" data-bs-src="assets/img/p2.jpg" data-bs-caption="Photo 2 description">
@@ -116,7 +111,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p3.jpg" class="card-img-top photo-img gallery-img" alt="Photo 3" data-bs-src="assets/img/p3.jpg" data-bs-caption="Photo 3 description">
@@ -125,8 +119,6 @@
             </div>
           </div>
         </div>
-
-        <!-- extra placeholders (optional) -->
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p7.jpg" class="card-img-top photo-img gallery-img" alt="Photo 4" data-bs-src="assets/img/p4.jpg" data-bs-caption="Photo 4 description">
@@ -135,7 +127,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p10.jpg" class="card-img-top photo-img gallery-img" alt="Photo 5" data-bs-src="assets/img/p5.jpg" data-bs-caption="Photo 5 description">
@@ -144,7 +135,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4">
           <div class="card shadow-sm gallery-card">
             <img src="assets/img/p11.jpg" class="card-img-top photo-img gallery-img" alt="Photo 6" data-bs-src="assets/img/p6.jpg" data-bs-caption="Photo 6 description">
@@ -153,12 +143,11 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Fullscreen Modal for gallery images -->
+  <!-- Fullscreen Modal -->
   <div class="modal fade" id="photoModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content bg-dark text-white border-0">
@@ -173,63 +162,65 @@
     </div>
   </div>
 
-  <!-- About Section (about the page) -->
+  <!-- About Section -->
   <section id="about" class="page-section bg-primary text-white mb-0 py-5">
-  <div class="container">
-    <!-- Section Heading -->
-    <h2 class="text-center text-uppercase text-white">About This Page</h2>
-    <div class="divider-custom divider-light my-4">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-      <div class="divider-custom-line"></div>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row g-4">
-      <!-- Overview Card -->
-      <div class="col-lg-7">
-        <div class="card shadow-lg border-0 rounded-3 h-100 text-dark">
-          <div class="card-body p-4">
-            <h4 class="card-title text-primary mb-3">
-              <i class="fas fa-info-circle me-2"></i> Welcome
-            </h4>
-            <p class="lead text-muted">
-              This page is dedicated to <strong>showcasing progress</strong> through photos. 
-              Guests can browse a responsive gallery that opens images in full-screen, 
-              learn more about the profile owner, and get in touch through the contact form. 
-              It’s designed for documenting <em>transformations, projects, and milestones</em>.
-            </p>
+    <div class="container">
+      <h2 class="text-center text-uppercase text-white">About This Page</h2>
+      <div class="divider-custom divider-light my-4">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+        <div class="divider-custom-line"></div>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card shadow-lg border-0 rounded-3 h-100 text-dark">
+            <div class="card-body p-4">
+              <h4 class="card-title text-primary mb-3">
+                <i class="fas fa-info-circle me-2"></i> Welcome
+              </h4>
+              <p class="lead text-muted">
+                This page is dedicated to <strong>showcasing progress</strong> through photos. 
+                Guests can browse a responsive gallery that opens images in full-screen, 
+                learn more about the profile owner, and get in touch through the contact form. 
+                It’s designed for documenting <em>transformations, projects, and milestones</em>.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Guest Info Card -->
-      <div class="col-lg-5">
-        <div class="card shadow-lg border-0 rounded-3 h-100 text-dark">
-          <div class="card-body p-4">
-            <h4 class="card-title text-success mb-3">
-              <i class="fas fa-users me-2"></i> For Guests
-            </h4>
-            <p class="lead text-muted">
-              Feel free to explore the gallery — all photos are stored safely in our system. 
-              Every image you see reflects part of a journey, shared here for inspiration. 
-            </p>
-            <p class="text-muted mb-0">
-              <i class="fas fa-handshake text-warning me-2"></i> 
-              No sign-in required — just enjoy browsing and connecting through the contact form.
-            </p>
+        <div class="col-lg-5">
+          <div class="card shadow-lg border-0 rounded-3 h-100 text-dark">
+            <div class="card-body p-4">
+              <h4 class="card-title text-success mb-3">
+                <i class="fas fa-users me-2"></i> For Guests
+              </h4>
+              <p class="lead text-muted">
+                Feel free to explore the gallery — all photos are stored safely in our system. 
+                Every image you see reflects part of a journey, shared here for inspiration.
+              </p>
+              <p class="text-muted mb-0">
+                <i class="fas fa-handshake text-warning me-2"></i>
+                No sign-in required — just enjoy browsing and connecting through the contact form.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-  <br>
+  <style>
+    html {
+      scroll-padding-top: 70px;
+    }
+    @media (max-width: 991px) {
+      html {
+        scroll-padding-top: 100px; 
+      }
+    }
+  </style>
 
-  <!-- Contact Section -->
- 
-
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
