@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  width: 100%;
+}
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+.header {
+  background-color: #09030c;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 10px;
+  margin-bottom: 7px;
+  background-color: #02131a;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+  background-color: #d5530d;
+}
+
+.aside {
+  background-color: #33b5c5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0  1px 2px rgba(0,0,0,0.24);
+}
+
+.footer {
+  background-color: #09161b;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+[class*="col-"] {width: 100%;}
+@media only screen and (min-width: 768px) {
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;} 
+
+
+  .col-3-right {
+    width: 25%;
+    float: right;
+    padding: 15px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Welcome To My Page</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li onclick="showContent('about')">ABOUT ME</li>
+      <li onclick="showContent('skills')">SKILLS</li>
+      <li onclick="showContent('hobbies')">HOBBIES</li>
+      <li onclick="showContent('favorite')">FAVORITES</li>
+    </ul>
+  </div>
+
+  <div class="col-6">
+    <div id="content">
+      <h1>About Me</h1>
+      <p>Hello! My name is John Xander. I currently learning at ISPSC Sta Maria collge student. I am passionate about learning new things, 
+      especially in technology and personal growth. I enjoy working on projects that 
+      challenge me and help me improve my skills.</p>
+      <p>I believe in continuous learning and strive to be the best version of myself, 
+      whether in academics, work, or personal life.</p>
+    </div>
+  </div>
+
+  <div class="col-3-right">
+    <div class="aside">
+      <h2>Contact</h2>
+      <p>09353228738</p>
+      <h2>Facebook</h2>
+      <p>John Xander Sotelo</p>
+      <h2>Instagram</h2>
+      <p>wasis_sigma</p>
+    </div>
+  </div>
+</div>
+
+
+<script>
+function showContent(section) {
+  let content = document.getElementById("content");
+  if (section === "about") {
+    content.innerHTML =
+      "<h1>About Me</h1>" +
+      "<p>Hello! My name is John Xander. I currently learning at ISPSC Sta Maria collge student. I am passionate about learning new things, " +
+      "especially in technology and personal growth. I enjoy working on projects that " +
+      "challenge me and help me improve my skills.</p>" +
+      "<p>I believe in continuous learning and strive to be the best version of myself, " +
+      "whether in academics, work, or personal life.</p>";
+      
+  } else if (section === "skills") {
+    content.innerHTML =
+      "<h1>Skills</h1>" +
+      "<p>- Time Management <br>" +
+      "- Responsibility <br>" +
+      "- Problem Solving <br></p>";
+      
+  } else if (section === "hobbies") {
+    content.innerHTML =
+      "<h1>Hobbies</h1>" +
+      "<p>- Playing basketball <br>" +
+      "- Watching movies <br>" +
+      "- Playing Mobile Legends <br>" +
+      "- Playing Clash of Clans</p>";
+      
+  } else if (section === "favorite") {
+    content.innerHTML =
+      "<h1>Favorites</h1>" +
+      "<p>- Color-Black <br>" +
+      "- Movie-Your Name <br>" +
+      "- Food- chicken <br>" +
+      "- Games-ML</p>";
+  }
+}
+</script>
+<div class="footer">
+  <p>&copy; 2025 My Personal Page</p>
+</div>
+
+</body>
+</html>

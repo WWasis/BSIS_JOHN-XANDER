@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 10px 15px; 
+  text-align: center;
+  position: relative;
+  height: 90px; 
+}
+
+.header h1 {
+  margin: 0;
+  line-height: 60px; 
+  font-size: 22px;   
+}
+
+.header .logo {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  height: 80px; 
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  padding: 10px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+@media screen and (max-width: 768px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Ilocos Sur Polytechnic State College</h1>
+  <img src="1.png" class="logo">
+</div>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li onclick="showContent('ispsc')">ISPSC</li>
+      <li onclick="showContent('vision')">VISION</li>
+      <li onclick="showContent('mission')">MISSION</li>
+      <li onclick="showContent('goals')">GOALS & OBJECTIVES</li>
+    </ul>
+  </div>
+
+  <div class="col-9">
+    <div id="content">
+      <h1>ISPSC</h1>
+      <p>
+        ISPSC is a comprehensive six-campus institution of higher learning mandated to give 
+        professional and technical training both in the undergraduate and graduate levels in 
+        the fields of economics, agriculture, fishery, trade, home industry, engineering, education, forest research and conservation, management, finance, accounting and business
+        administration, public administration and other fields as may be relevant, besides providing for the promotion of
+        scientific and technological researches which the College deems necessary in carrying out its objectives. 
+      </p>
+      <p>
+        The main campus is situated in Santa Maria, Ilocos Sur and the five other campuses are strategically located in 
+        Candon City and the municipalities of Narvacan, Santiago, Tagudin, and Cervantes.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+function showContent(section) {
+  let content = document.getElementById("content");
+  if (section === "ispsc") {
+    content.innerHTML = 
+      "<h1>ISPSC</h1>" +
+      "<p>ISPSC is a comprehensive six-campus institution of higher learning mandated to give " +
+      "professional and technical training both in the undergraduate and graduate levels in " +
+      "the fields of economics, agriculture, fishery, trade, home industry, engineering, education, forest research and conservation, management, finance, accounting and business " +
+      "administration, public administration and other fields as may be relevant, besides providing for the promotion of " +
+      "scientific and technological researches which the College deems necessary in carrying out its objectives.</p>" +
+      "<p>The main campus is situated in Santa Maria, Ilocos Sur and the five other campuses are strategically located in " +
+      "Candon City and the municipalities of Narvacan, Santiago, Tagudin, and Cervantes.</p>";
+  } else if (section === "vision") {
+    content.innerHTML = 
+      "<h1>Vision</h1>" +
+      "<p>A smart globally competitive and responsive state university.</p>";
+  } else if (section === "mission") {
+    content.innerHTML = 
+      "<h1>Mission</h1>" +
+      "<p>UIP is committed to producing globally competent and virtuous human resources, generating advanced knowledge, and " +
+      "developing innovative technologies for the sustainable development of society.</p>";
+  } else if (section === "goals") {
+    content.innerHTML = 
+      "<h1>Goals & Objectives</h1>" +
+      "<p>The program prepares students to be IS professionals both local and global context who are expected to design and " +
+      "implement solutions that integrate Information Technology with business processes. A sound understanding of organizational " +
+      "principles and practices so that they can serve as effective bridges between the technical and management communities " +
+      "within the organization; as well as engaged in life-long learning endeavors which are capable of contributing in research, " +
+      "extension and resource generation in the field of Information Systems.</p>";
+  }
+}
+</script>
+</body>
+</html>
